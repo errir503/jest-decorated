@@ -1,6 +1,7 @@
 export * from "./Class";
 export * from "./ComponentContext";
 export * from "./ComponentProvider";
+export * from "./ComponentStore";
 export * from "./ExtendedTest";
 export * from "./Hook";
 export * from "./LazyModule";

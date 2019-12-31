@@ -1,6 +1,7 @@
 import { Class, IComponentService, IContextService, IPropsAndStateService, IReactExtension } from "@jest-decorated/shared";
 
 import { ComponentService, ContextService, PropsAndStateService } from "../services";
+import { StoreService } from "../services/StoreService";
 
 export class ReactExtension implements IReactExtension {
 
@@ -20,7 +21,8 @@ export class ReactExtension implements IReactExtension {
         private readonly clazz: Class,
         private readonly componentService: IComponentService = new ComponentService(clazz),
         private readonly propsAndStateService: IPropsAndStateService = new PropsAndStateService(componentService),
-        private readonly contextService: IContextService = new ContextService()
+        private readonly contextService: IContextService = new ContextService(),
+        private readonly storeService = new StoreService()
     ) {}
 
     public getComponentService(): IComponentService {
